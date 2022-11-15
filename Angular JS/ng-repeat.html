@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ng-repeat demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+ 
+<style type="text/css">
+    body
+    {
+        background-color: royalblue;
+    }
+    p
+    {
+        background-color: silver;
+    }
+</style>
+</head>
+<body ng-app>
+ 
+
+<div ng-init="menus=['idly','rice','vada','poha']">
+ 
+using expression :  {{menus}}
+ 
+   <p ng-repeat="menu in menus">
+        {{menu}}  <br><br>
+</p>
+ 
+</div> 
+<hr>
+
+<div ng-init="num=[1,2,3,4,5,6,7,8,9,10,11,12,13]">
+ 
+using expression :  {{num}}
+ 
+   <p ng-repeat="n in num">
+        {{n}}   ----- {{n+100}} --- {{n*2}}--- {{n*3}}---- {{n*4}} <br><br>
+</p>
+</div>   
+ 
+ 
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+</head>
+<body ng-app>
+ 
+
+<div ng-init="name='safan'; age=34">
+ 
+   name is {{name}}  <br>
+   your age is {{age}}  <br>
+</div>    
+ 
+<input type="text" ng-model="n" placeholder="enter your name"> <br>
+ 
+your name is {{n}}
+
+
+<hr>
+<h2>Array </h2>
+<div ng-init="fruits=['apple','mango','banana']">
+<p>fruit list : {{fruits}}      </p>     
+<p>fruit list at 1 index: {{fruits[1]}} </p> 
+</div>    
+ 
+
+<hr>
+<h2>Object</h2>
+<div ng-init="employee={id:1,name:'sachin',dept:'hr'}">
+<p>
+        {{employee.id}} <br>
+        {{employee.name}} <br>
+        {{employee.dept}} <br>
+ 
+   </p>
+
+</div>
+</body>
+</html>

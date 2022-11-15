@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+<style type="text/css">
+    body
+    {
+        background-color: skyblue;
+    }
+    div
+    {
+        background-color: gold;
+    }
+</style>
+ 
+</head>
+<body ng-app>
+ 
+select age:    <input type="number" ng-model="age" > 
+ 
+<div ng-if="age>=18">
+<h2>You are eligible to vote</h2>
+ 
+  <h4>Terms and condtion</h4>
+<p>dont hurry, follow the queue. <br>
+      provide the necessary document
+
+</p>
+</div>    
+ 
+<div ng-if="age<18">
+<h2>You are not eligible to vote </h2>
+ 
+  <h4>Terms and condtion</h4>
+<p>To vote, your age should be greater than 18 <br>
+     you should be a citizen of india. <br>
+     you should have valid Voter Id card.
+</p>
+</div>    
+ 
+
+</body>
+</html>

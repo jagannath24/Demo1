@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>controller demo</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+ 
+</head>
+<body ng-app="myAngularApp">
+ 
+<div ng-controller="mycontroller" >
+    {{name}} 
+    {{age}}
+
+</div>
+ 
+<div ng-controller="mycontroller2" >
+    {{name}} 
+    {{age}}
+ 
+</div>
+ 
+<div ng-controller="studentslist">
+    {{student}}
+</div>
+ 
+<div ng-controller="menu">
+    {{menus}} <br>
+    {{menus[1]}}
+ 
+</div>
+ 
+
+<script type="text/javascript">
+    var ngApp=angular.module('myAngularApp',[]);
+ 
+    ngApp.controller('mycontroller',function ($scope) {
+         $scope.name="kumar";
+         $scope.age=23;
+ 
+    });
+ 
+  ngApp.controller('mycontroller2',function ($scope) {
+         $scope.name="rohit";
+         $scope.age=45;
+ 
+
+    });
+ 
+   ngApp.controller('studentslist',function($scope)
+   {
+        $scope.student ={name:'rohit',age:19,gender:'male'};
+   });
+
+    ngApp.controller('menu',function($scope)
+   {
+        $scope.menus =[{name:'idly',price:30},
+                       {name:'vada',price:20},
+                       {name:'rice',price:30}
+                       ];
+   });
+
+</script>
+ 
+ 
+</body>
+</html>
